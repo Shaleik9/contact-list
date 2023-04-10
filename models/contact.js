@@ -24,3 +24,5 @@ const contactSchema = new Schema({
     min: 1900
   }
 })
+
+module.exports = mongoose.model('Contact', contactSchema);

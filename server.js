@@ -12,10 +12,8 @@ require('./config/database');
 require('./config/passport');
 
 const indexRouter = require('./routes/index');
-const contactsRouter = require('.routes/contacts');
+const contactsRouter = require('./routes/contacts');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 

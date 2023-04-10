@@ -7,4 +7,6 @@ const contactsCtrl = require('../controllers/contacts');
 router.get('/', contactsCtrl.index);
 router.get('new', contactsCtrl.new);
 router.get('/:id', contactsCtrl.show);
-//router.post('/', contactsCtrl.create);
+router.post('/', contactsCtrl.create);
+
+module.exports = router;

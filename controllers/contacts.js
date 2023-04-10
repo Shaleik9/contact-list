@@ -1,5 +1,4 @@
 const Contact = require('../models/contact');
-const { create } = require('../models/user');
 
 module.exports = {
 index,
@@ -22,6 +21,12 @@ function newContact(req, res) {
   res.render('contacts/new', {title: 'Add Contact', errorMsg: '' });
 }
 
-// async function create(req, res) {
-
-// }
+async function create(req, res) {
+  try {
+    await Contact.create(req.body);
+    res.redirect('/contacts');
+  } catch (err) {
+    console.log(err);
+    res.render('contacts/new', { errorMsg: err.message });
+  }
+}
