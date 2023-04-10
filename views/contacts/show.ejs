@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+  <section id="show-page">
+    <h1>My Contacts</h1>
+    <div>Name: </div>
+    <div><%= contact.name %></div>
+    <div>Email: </div>
+    <div><%= contact.email %></div>
+    <div>Phone Number: </div>
+    <div><%= contact.phoneNumber %></div>
+    <div>Birthday: </div>
+    <div><%= contact.birthday %></div>
+   
+    <a href="/contacts/<%= contact._id %>/edit">Edit</a>
+
+    <%- include('../partials/footer') %>

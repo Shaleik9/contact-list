@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<h1>All Contacts</h1>
+<table id="list">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% contacts.forEach(function(contact) { %>
+      <tr>
+        <td><%= contact.name %></td>
+        <!-- <td><%= contact.phoneNumber %></td> -->
+        <td><a href="/contacts/<%= contact._id %>">INFO</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+<%- include('../partials/footer') %>

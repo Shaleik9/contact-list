@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<h1>Edit Contact</h1>
+
+<form action="/contacts/<%= contact._id %>?_method=PUT" method="POST">
+<label>Name: </label>
+<input type="text" name="name" value="<%= contact.name %>">
+
+<label for="email">Email: </label>
+<input type="email" name="email" value="<%= contact.email %>">
+
+<label for="phoneNumber">Phone number: </label>
+<input type="tel" name="phoneNumber" value="<%= contact.phoneNumber %>">
+
+<label for="birthday">Birthday: </label>
+<input type="date" name="birthday" min="1900-01-01" value="<%= contact.birthday %>">
+<button type="submit">Update Contact</button>
+</form>
+
+<%- include('../partials/footer') %>
