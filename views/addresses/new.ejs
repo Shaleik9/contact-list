@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<h1>New Address</h1>
+<form method="POST" action="/contacts/<%= contactId %>/addresses">
+  <label>Street: </label>
+  <input type="text" name="street">
+
+  <label>City: </label>
+  <input type="text" name="city">
+
+  <label>State:</label>
+  <input type="text" name="state">
+
+  <label>Country:</label>
+  <input type="text" name="country">
+  
+  <label>Zip: </label>
+  <input type="text" name="zip">
+
+  <button type="submit">Add Address</button>
+</form>
+
+<%- include('../partials/footer') %>

@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
 
+
   <section id="show-page">
-    <h1>My Contacts</h1>
+    <h1>Contact</h1>
     <div>Name: </div>
     <div><%= contact.name %></div>
     <div>Email: </div>
@@ -10,7 +11,38 @@
     <div><%= contact.phoneNumber %></div>
     <div>Birthday: </div>
     <div><%= contact.birthday %></div>
-   
     <a href="/contacts/<%= contact._id %>/edit">Edit</a>
 
+    <h2>Address</h2>
+     <% if (addresses.length) {%>
+    <table>
+      <thead>
+        <tr>
+          <th>Street</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Country</th>
+          <th>Zip</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% addresses.forEach((address) => { %>
+          <tr>
+            <td><%= address.street %></td>
+            <td><%= address.city %></td>
+            <td><%= address.state %></td>
+            <td><%= address.country %></td>
+            <td><%= address.zip %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <% } else { %>
+      <h5>No Address Yet</h5>
+    <% } %>
+    <a href="/contacts/<%= contact._id %>/addresses/new">Add Address</a>
+    |
+    <a href="/contacts/<%= contact._id %>/addresses/edit">Edit Address</a>
+
+    
     <%- include('../partials/footer') %>

@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h1>Edit Address</h1>
+
+<% if (address) { %>
+<form action="/addresses/<%= address._id %>?_method=PUT" method="POST">
+<label>Street: </label>
+<input type="text" name="street" value="<%= address.street %>">
+
+<label>City: </label>
+<input type="text" name="city" value="<%= address.city %>">
+
+<label>State: </label>
+<input type="text" name="state" value="<%= address.state %>">
+
+<label>Country: </label>
+<input type="text" name="country" value="<%= address.country %>">
+
+<label>Zip: </label>
+<input type="text" name="zip" value="<%= address.zip %>">
+
+<button type="submit">Update Address</button>
+</form>
+<% } else { %>
+  <p>Address not found</p>
+<% } %>
+<%- include('../partials/footer') %>

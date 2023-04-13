@@ -1,4 +1,5 @@
 const Contact = require('../models/contact');
+const Address = require('../models/address');
 
 module.exports = {
 index,
@@ -16,7 +17,8 @@ async function index(req, res) {
 
 async function show(req, res) {
   const contact = await Contact.findById(req.params.id)
-  res.render('contacts/show', { title: 'Contact Detail', contact });
+  const addresses = await Address.find({ contact: contact._id });
+  res.render('contacts/show', { title: 'Contact Detail', contact, addresses });
 }
 
 function newContact(req, res) {
