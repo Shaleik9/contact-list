@@ -1,12 +1,155 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-table {
+body {
+  background-color: bisque;
+  background-size: cover;
+}
+
+nav {
+  padding: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(0deg, rgba(158, 163, 163, 1) 41%, rgba(45, 43, 41, 1) 89%);
+  ;
+}
+
+form label {
+  color: rgb(255, 255, 255);
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #40b835;
+}
+
+form button[type="submit"] {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  padding: 14px 24px;
+  margin: 17px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: grey;
+}
+
+body>nav {
+  grid-area: nav;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+nav>a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+nav>a:hover:not(.active) {
+  color: white;
+  background-color: #424748;
+}
+
+nav>a.active {
+  color: white;
+  cursor: default;
+}
+
+nav {
+  background-color: #026aa7;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+ table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 2em;
+  margin: 0 auto;
 }
 
 thead {
@@ -29,7 +172,11 @@ tbody td {
 
 a {
   text-decoration: none;
-  color: rgb(117, 168, 94);
+  color: rgb(12, 17, 10);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 #list {
@@ -37,12 +184,15 @@ a {
   width: 100%;
 }
 
-#list th, #list td {
+#list th,
+#list td {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#list tr:hover {background-color: #ddd;}
+#list tr:hover {
+  background-color: #ddd;
+}
 
 #list th {
   padding-top: 12px;
@@ -52,3 +202,64 @@ a {
   color: rgb(255, 255, 255);
 }
 
+#show-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(0deg, rgba(158, 163, 163, 1) 41%, rgba(45, 43, 41, 1) 89%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#show-page div[id^="contact-"] {
+  font-weight: bold;
+}
+
+#show-page a {
+  margin: 350px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#show-page a:hover {
+  background-color: grey;
+}
+
+#show-page div {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#add-address {
+  margin: 0px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+#edit-address {
+  margin: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#welcome {
+  text-align: center;
+  font-size: 4rem;
+  color: #2e2e2e;
+  margin-top: 2rem;
+}

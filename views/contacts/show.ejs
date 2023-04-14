@@ -3,16 +3,16 @@
 
   <section id="show-page">
     <h1>Contact</h1>
-    <div>Name: </div>
-    <div><%= contact.name %></div>
-    <div>Email: </div>
-    <div><%= contact.email %></div>
-    <div>Phone Number: </div>
-    <div><%= contact.phoneNumber %></div>
-    <div>Birthday: </div>
-    <div><%= contact.birthday %></div>
+    <div id="name">Name: </div>
+    <div id="contact-name"><%= contact.name %></div>
+    <div id="email">Email: </div>
+    <div id="contact-email"><%= contact.email %></div>
+    <div id="phoneNumber">Phone Number: </div>
+    <div id="contact-phone-number"><%= contact.phoneNumber %></div>
+    <div id="Birthday">Birthday: </div>
+    <div id="contact-birthday"><%= contact.birthday %></div>
     <a href="/contacts/<%= contact._id %>/edit">Edit</a>
-
+</section>
     <h2>Address</h2>
      <% if (addresses.length) {%>
     <table>
@@ -40,9 +40,8 @@
     <% } else { %>
       <h5>No Address Yet</h5>
     <% } %>
-    <a href="/contacts/<%= contact._id %>/addresses/new">Add Address</a>
-    |
-    <a href="/contacts/<%= contact._id %>/addresses/edit">Edit Address</a>
-
+    <a id="add-address" href="/contacts/<%= contact._id %>/addresses/new">Add Address</a>
+    <a id="edit-address" href="/contacts/<%= contact._id %>/addresses/edit">Edit Address</a>
+  
     
     <%- include('../partials/footer') %>
