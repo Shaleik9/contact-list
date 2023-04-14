@@ -7,7 +7,8 @@ In this contact-list we allow users to store a collection of people's names, pho
 ![APPWELCOME](https://user-images.githubusercontent.com/124411560/232059022-f0fbd3d3-5923-48d4-9649-c497db157162.png)
 ![contact-list](https://user-images.githubusercontent.com/124411560/232059162-16acaea8-c641-419e-a0bf-e3a68343e424.png)
 ![form](https://user-images.githubusercontent.com/124411560/232059209-06e6c335-b874-41ae-841f-f3eb25562e73.png)
-[Click Here to Try!] (https://contact-list-3623.herokuapp.com)
+[Click Here to Try!](https://contact-list-3623.herokuapp.com) |
+[Trello Planning](https://trello.com/b/vrubmNya/contact-list)
 
 ---
 ## **Technologies Used** :
