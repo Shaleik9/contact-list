@@ -1,5 +1,5 @@
 # Contact-list
-In this contact-list we allow users to store a collection of people's names, phone numbers, email addresses, and other relevant information pertaining to their contacts address. People store contact data on an everyday basis in order to stay organized and in touch with their friends, family, colleagues and loved ones without having to remember or go through the hassle searching their information just to reachout. This app allows for better communication, efficieny, and productivity when storing personal information and staying connected with others.
+In this contact-list we allow users to store a collection of people's names, phone numbers, email addresses, and other relevant information pertaining to their contacts address. People store contact data on an everyday basis in order to stay organized and in touch with their friends, family, colleagues and loved ones without having to remember or go through the hassle of searching their information just to reach out. This app allows for better communication, efficiency, and productivity when storing personal information and staying connected with others.
 ---
 
 ## **Screenshots of the app** :
